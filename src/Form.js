@@ -80,11 +80,11 @@ class Form extends Component {
         return ( 
             <div>
                  <nav className="navbar navbar-light bg-light">
-            <a className="navbar-brand">
+            <h2 className="navbar-brand">
                 <img src="https://res.cloudinary.com/morayo/image/upload/v1598448200/inec_rpxkc0.jpg" style=
                 {{width: "5rem", height:"5rem"}} alt=""/> Register to vote
 
-            </a>
+            </h2>
                
             </nav>
                 <form className="container-fluid" onSubmit={this.handleSubmit}>
