@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './Form.js'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
  class App extends Component {
@@ -39,7 +39,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
      render() { 
          return ( 
             <div>
-                <Form/>
+               
             <nav className="navbar navbar-light bg-light">
             <a className="navbar-brand">
                 <img src="https://res.cloudinary.com/morayo/image/upload/v1598392767/ig_dnvuz3.jpg" style=
