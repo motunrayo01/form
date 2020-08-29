@@ -4,17 +4,17 @@
 .container-fluid{background-image:url("https://res.cloudinary.com/morayo/image/upload/v1598448418/download_1_khxgyt.jpg") ;background-size: cover; background-position: cover;
     background-attachment: fixed; font-size: 24px; }
    
-    .one{ background: #d5f1e8; width: 50%; color: #353535; margin-top: 10px; font-size: 24px;
+    .one{ background: #d5f1e8; width: 100%; color: #353535; margin-top: 10px; font-size: 24px;
         font-size: 22px;border-radius: 10px; opacity:0.8;margin-left: 15px;padding: 20px;}
     
    
-    .two{ background: #d5f1e8; width: 50%; color: #353535; opacity:0.8;
+    .two{ background: #d5f1e8; width: 100%; color: #353535; opacity:0.8;
         margin-top: 10px;font-size: 22px;border-radius: 10px;margin-left: 15px;padding: 20px;}
     
-    .three{ background: #d5f1e8; width: 50%; color: #353535; opacity:0.8; margin-top: 10px;
+    .three{ background: #d5f1e8; width: 100%; color: #353535; opacity:0.8; margin-top: 10px;
         font-size: 22px;border-radius: 10px;margin-left: 15px;padding: 20px;}
         
-    .four{ background: #d5f1e8; width: 50%; color: #353535; opacity:0.8;
+    .four{ background: #d5f1e8; width: 100%; color: #353535; opacity:0.8;
         font-size: 22px;border-radius: 10px;margin-left: 15px;padding: 20px; margin-top: 10px;}
     .input{width: 20px;padding: 20px;}
     .rating{width: 30px;padding: 20px;}
