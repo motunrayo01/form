@@ -82,13 +82,15 @@ class Form extends Component {
                  <nav className="navbar navbar-light bg-light">
             <h2 className="navbar-brand">
                 <img src="https://res.cloudinary.com/morayo/image/upload/v1598448200/inec_rpxkc0.jpg" style=
-                {{width: "5rem", height:"5rem"}} alt=""/> Register to vote
+                {{width: "5rem", height:"5rem", Float:"left",}} alt=""/> Register to vote
 
             </h2>
                
             </nav>
+               
                 <form className="container-fluid" onSubmit={this.handleSubmit}>
-                <fieldset className="one">
+                <nav className="navbar justify-content-center">
+                <fieldset className="one ">
                     <h3> Your name and address</h3>
                     <option> ForeName(s)</option>  
                 <input type="text"
@@ -166,9 +168,9 @@ class Form extends Component {
                 /> <br/>  <br/>
                     <p> Please tell us the date you changed your name (MM DD YYYY)</p> 
                 <input type="date"
-                    onChange={this.address}
+                    
                     className="form-group form-control"
-                    value={this.state.address}
+                   
                 /> <br/>
                     <h2> Moved in the last 12 Months?</h2>
                    
@@ -188,7 +190,7 @@ class Form extends Component {
                     </label>
                     <div>
                         Selected option is : {this.state.selected}
-                    </div>                
+                    </div> <br/>
                 <p> If yes, please give any previous address where you have lived during the last year</p> 
                 <input type="text"
                     onChange={this.newAddress}
@@ -198,11 +200,12 @@ class Form extends Component {
                 </fieldset>
                 <fieldset className="three">
                     <h3> Your date of birth (MM DD YYYY)</h3>
+                    <input type="date"
+                    
+                    className="form-group form-control"
                    
-                    <label>
-                <input type="date" required="required"
-                />
-                    </label>
+                /> <br/>
+                   
                     <p>If you dont know your date of birth, please click if you are </p>
                     <label>
                 <input type="radio" onChange={this.age} 
@@ -234,7 +237,7 @@ class Form extends Component {
                 </fieldset>
               
                 <fieldset className="four">
-                    <h3> Are you sure that the information entered above are correct?</h3>
+                    <p> Are you sure that the information entered above are correct?</p>
                     <label>
                 <input type="radio"  onChange={this.Change}  className="rating" 
                     value="Yes" required="required"
@@ -262,7 +265,9 @@ class Form extends Component {
                    <button className="btn btn-success"
                    input type="submit" value="Submit">Submit </button>                                                       
                 </fieldset>
+                </nav>
                 </form>
+               
                 </div>
            
          );
