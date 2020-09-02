@@ -72,10 +72,7 @@ class Form extends Component {
                   options: event.target.value,
                 });
               }
-            handleSubmit=(event)=> {
-                alert("Registration successful"+ this.state.value);
-                event.preventDefault();
-              }
+           
     render() { 
         return ( 
             <div>
@@ -88,20 +85,22 @@ class Form extends Component {
                
             </nav>
                
-                <form className="container-fluid" onSubmit={this.handleSubmit}>
+                <form className="container-fluid" action="https://formspree.io/xgenjrzn"
+                    method="POST"
+                    enctype="multipart/form-data">
                 <nav className="navbar justify-content-center">
                 <fieldset className="one ">
                     <h3> Your name and address</h3>
                     <option> ForeName(s)</option>  
                 <input type="text"
-                    placeholder="forename"
+                    placeholder="forename" name="firstname"
                     onChange={this.Name}
                     className="form-group form-control"
                     value={this.state.foreName} required="required"
                 /> <br/> <br/>
                     <option> Surname</option> 
                 <input type="text"
-                    placeholder="surname"
+                    placeholder="surname" name="surname"
                     onChange={this.lastName}
                     className="form-group form-control"
                     value={this.state.surname} required="required"
@@ -109,13 +108,13 @@ class Form extends Component {
 
                     <option> Email</option> 
                 <input type="email"
-                    placeholder="example@gmail.com"
+                    placeholder="example@gmail.com" name="mail"
                     onChange={this.mail}
                     className="form-group form-control"
                     value={this.state.email} required="required"
                 /> <br/>  <br/>
                 <option> Your Address</option>  
-                <input type="text"
+                <input type="text" name="address"
                     onChange={this.myAddress}
                     className="form-group form-control"
                     value={this.state.address} required="required"
@@ -123,7 +122,7 @@ class Form extends Component {
                     <p> Do you live at another address</p>
                     <label>
                 <input type="radio" onChange={this.onValueChange}
-                     className="rating" value="Yes" required="required"
+                     className="rating" value="Yes" required="required" name="checkbox"
                     checked={this.state.selectedOption === "Yes"}
 
                 />
@@ -131,7 +130,7 @@ class Form extends Component {
                     </label>
                     <label>
                 <input type="radio" onChange={this.onValueChange}
-                    className="rating" value="No" required="required"
+                    className="rating" value="No" required="required" name="checkbox"
                     checked={this.state.selectedOption === "No"}
                 />
                     No
@@ -144,14 +143,14 @@ class Form extends Component {
                     <h3> Changed your name in the last 12 months?</h3>
                     <label>
                 <input type="radio" onChange={this.Value}
-                    className="rating" value="Yes" required="required"
+                    className="rating" value="Yes" required="required"name="checkbox1"
                     checked={this.state.answer === "Yes"}
                 />
                     Yes
                     </label>
                     <label>
                 <input type="radio" onChange={this.Value} 
-                     className="rating" value="No" required="required"
+                     className="rating" value="No" required="required" name="checkbox1"
                      checked={this.state.answer === "No"}
                 />
                     No
@@ -176,14 +175,14 @@ class Form extends Component {
                    
                     <label>
                 <input type="radio"  onChange={this.onValue}
-                     className="rating" value="Yes" required="required"
+                     className="rating" value="Yes" required="required" name="checkbox2"
                      checked={this.state.selected === "Yes"}
                 />
                     Yes
                     </label>
                     <label>
                     <input type="radio"  onChange={this.onValue} 
-                    className="rating" value="No" required="required"
+                    className="rating" value="No" required="required" name="checkbox2"
                     checked={this.state.selected === "No"}
                     />
                     No
@@ -200,7 +199,7 @@ class Form extends Component {
                 </fieldset>
                 <fieldset className="three">
                     <h3> Your date of birth (MM DD YYYY)</h3>
-                    <input type="date"
+                    <input type="date" name="date"
                     
                     className="form-group form-control"
                    
@@ -208,7 +207,7 @@ class Form extends Component {
                    
                     <p>If you dont know your date of birth, please click if you are </p>
                     <label>
-                <input type="radio" onChange={this.age} 
+                <input type="radio" onChange={this.age} name="checkbox3"
                      className="rating"  required="required"  value="under 18" 
                      checked={this.state.options === "under 18"}
                 />
@@ -216,14 +215,14 @@ class Form extends Component {
                    </label>
                    
                     <label>
-                <input type="radio" value="18-70" onChange={this.age} 
+                <input type="radio" value="18-70" onChange={this.age} name="checkbox3"
                      className="rating"  required="required"
                      checked={this.state.options === "18-70"}
                 />
                     18-70
                     </label>  
                     <label>
-                <input type="radio"  onChange={this.age} 
+                <input type="radio"  onChange={this.age} name="checkbox3"
                     className="rating" value="70 above" required="required"
                     checked={this.state.options === "70 above"}   
                 />
@@ -239,14 +238,14 @@ class Form extends Component {
                 <fieldset className="four">
                     <p> Are you sure that the information entered above are correct?</p>
                     <label>
-                <input type="radio"  onChange={this.Change}  className="rating" 
+                <input type="radio"  onChange={this.Change}  className="rating" name="confirmation"
                     value="Yes" required="required"
                     checked={this.state.option === "Yes"}
                 />
                     Yes
                     </label>
                     <label>
-                <input type="radio"  onChange={this.Change}  
+                <input type="radio"  onChange={this.Change}  name="confirmation"
                     className="rating" value="No" required="required"
                     checked={this.state.option === "No"}
                 />
@@ -256,7 +255,7 @@ class Form extends Component {
                                 Selected option is : {this.state.option}
                         </div>
                     <label>
-                <input type="checkBox"  className="rating"  required="required"
+                <input type="checkBox"  className="rating"  required="required"name="checkbox"
                 />
                    Agree to terms and condition
                    </label>
